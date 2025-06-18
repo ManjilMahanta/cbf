@@ -1,0 +1,244 @@
+/* 🌐 Global Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #fdf6ec, #f0d7a1);
+  color: #3a2e1d;
+}
+
+/* ===================== */
+/* 🔶 NAVIGATION BAR */
+/* ===================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: #f4c56c;
+  color: #000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #a76b1f;
+}
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===================== */
+/* 🟨 Services Page Layout */
+/* ===================== */
+.services-page {
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Each section container */
+.service-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+/* Images */
+.service-section img,
+.service-video {
+  width: 45%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Text */
+.service-text {
+  width: 45%;
+  max-width: 500px;
+}
+
+.service-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #a76b1f;
+}
+
+.service-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3a2e1d;
+}
+
+/* Alternating layout */
+.left-image {
+  flex-direction: row;
+}
+
+.right-image {
+  flex-direction: row-reverse;
+}
+
+/* ===================== */
+/* 📱 Responsive (Mobile) */
+/* ===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .service-section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .service-section img,
+  .service-video,
+  .service-text {
+    width: 90%;
+  }
+}
+.enquiry-form-section {
+  background: linear-gradient(to right, #fff9f0, #f4e1bd);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.enquiry-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #a76b1f;
+}
+
+#enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.service-select-toggle {
+  background-color: #a76b1f;
+  color: #fff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background 0.3s;
+}
+
+.service-select-toggle:hover {
+  background-color: #7a5016;
+}
+
+.service-options {
+  display: none;
+  text-align: left;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.service-options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.send-button {
+  background-color: #a76b1f;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.send-button:hover {
+  background-color: #7a5016;
+}

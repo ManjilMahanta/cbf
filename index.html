@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photography Website</title>
+
+  <link rel="stylesheet" href="home.css" />
+  <script defer src="script.js"></script>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="loader-wrapper" id="loader">
+  <div class="loader"></div>
+</div>
+
+
+  <!-- 🔶 TOP NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.jpg" alt="Site Logo" />
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- 🌟 HERO VIDEO SECTION -->
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="assets/herovideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+      <img src="assets/logo.jpg" alt="Logo" class="hero-logo" />
+      <h1 class="brand-name-line">
+        <span class="cursive">The</span>
+        <span class="bold">VOW</span>
+        <span class="cursive">Story</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- 🎥 WORK PREVIEW VIDEO SCROLLER -->
+  <section class="work-preview">
+    <div class="video-track">
+  <!-- 6 videos -->
+  <video src="assets/1.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/2.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/3.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/4.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/5.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/6.mp4" muted loop autoplay playsinline class="preview-video"></video>
+
+  <!-- duplicated for seamless scroll -->
+  <video src="assets/1.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/2.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/3.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/4.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/5.mp4" muted loop autoplay playsinline class="preview-video"></video>
+  <video src="assets/6.mp4" muted loop autoplay playsinline class="preview-video"></video>
+</div>
+    </div>
+
+    <div class="video-modal" id="videoModal">
+      <video id="modalVideo" controls></video>
+      <button class="mute-toggle" id="muteToggle">🔇</button>
+      <button class="close-modal" id="closeModal">✕</button>
+    </div>
+
+    <a href="Gallery/gallery.html" class="view-works-btn">View Works</a>
+  </section>
+
+  <!-- 🧑‍💼 ABOUT US -->
+  <section class="about-us">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>
+        <strong>The Vow Story</strong> is a professional photography and videography studio based in <strong>Assam</strong>, capturing emotions, stories, and timeless memories with precision and artistry.
+        <br><br>
+        With a cinematic eye and a storyteller's heart, we specialize in <strong>wedding films, couple portraits, engagement shoots</strong>, and all forms of event coverage.
+        <br><br>
+        We proudly offer our services across <strong>India</strong>, blending Assamese authenticity with a pan-Indian creative flair. Whether it’s an intimate ceremony or a grand destination wedding, we ensure every frame reflects your unique journey.
+      </p>
+    </div>
+      <div class="cta-button">
+  <a href="services.html" class="explore-btn">Explore Services</a>
+</div>
+
+  </section>
+
+
+
+  <!-- 🖼️ PHOTO VIEWER SECTION -->
+  <section class="photo-viewer">
+    <div class="viewer-container">
+      <button class="arrow left" onclick="changeImage(-1)">&#10094;</button>
+      <img id="main-photo" src="assets/photos/1.JPG" alt="Gallery Image" />
+      <button class="arrow right" onclick="changeImage(1)">&#10095;</button>
+    </div>
+  </section>
+
+</body>
+</html>

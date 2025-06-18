@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | The Vow Story</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+
+  <!-- Services CSS -->
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+
+  <!-- 🔃 Loader Spinner -->
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- 🔶 TOP NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.jpg" alt="Site Logo" />
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="social-icons">
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="burger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- 🌟 SERVICES SECTION -->
+  <section class="services-page">
+
+    <!-- Service 1 -->
+    <div class="service-section left-image scroll-fade">
+      <img src="assets/engagement.jpg" alt="Engagement Shoot" />
+      <div class="service-text">
+        <h2>Engagement, Pre-Wedding & Wedding</h2>
+        <p>
+          From nervous glances to joyful vows, we capture love in its most vulnerable and radiant form.  
+          Each frame is a whisper of forever, a promise sealed in light — <strong>your story, told tenderly  
+          through our lens, from pre-wedding magic to wedding-day marvel.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-section right-image scroll-fade">
+      <video class="service-video" autoplay muted loop playsinline>
+        <source src="assets/story.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="service-text">
+        <h2>Cinematic Wedding Films & Event Coverage</h2>
+        <p>
+          We don't just film moments — <strong>we compose symphonies of emotion.</strong><br><br>
+          With cinematic frames, ambient sound, and sweeping visuals, we breathe life into your day,  
+          turning memories into movies that move hearts long after the curtains fall.
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-section left-image scroll-fade">
+      <img src="assets/couple.JPG" alt="Traditional Photography" />
+      <div class="service-text">
+        <h2>Traditional Photography & Couple Portraits</h2>
+        <p>
+          In every ritual lies a rhythm, in every gaze a silent poetry.  
+          We freeze time to honor tradition and love, blending timeless techniques  
+          with tender storytelling — <strong>portraits that speak when words fall short.</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-section right-image scroll-fade">
+      <img src="assets/postproduction.jpg" alt="Post Production Editing" />
+      <div class="service-text">
+        <h2>Advanced Post-Production, Color Grading & Editing</h2>
+        <p>
+          Where raw emotion meets refined artistry.  
+          Through color, clarity, and cinematic finesse, our post-production magic elevates  
+          every shot into a story — <strong>polished, powerful, and profoundly personal.</strong>
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="enquiry-form-section scroll-fade">
+  <h2>Send Us Your Enquiry</h2>
+  <form id="enquiry-form" onsubmit="sendWhatsAppMessage(event)">
+    <div class="input-group">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}" />
+    </div>
+
+    <div class="service-select-toggle" onclick="toggleServiceList()">Choose Services ▾</div>
+    <div class="service-options" id="service-options">
+      <label><input type="checkbox" name="services" value="Engagement & Wedding" /> Engagement & Wedding</label>
+      <label><input type="checkbox" name="services" value="Cinematic Films & Event Coverage" /> Cinematic Films & Event Coverage</label>
+      <label><input type="checkbox" name="services" value="Traditional Photography & Portraits" /> Traditional Photography & Portraits</label>
+      <label><input type="checkbox" name="services" value="Post-Production & Editing" /> Post-Production & Editing</label>
+    </div>
+
+    <button type="submit" class="send-button">Send Enquiry</button>
+  </form>
+</section>
+
+
+  <!-- ✅ Services JS -->
+  <script src="script.js" defer></script>
+
+</body>
+</html>
